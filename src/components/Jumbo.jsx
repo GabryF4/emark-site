@@ -11,20 +11,27 @@ const jumbo = () => {
       type: 'words'
     })
 
-    const tl = gsap.timeline({
-      
+    const tljumbo = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#jumbo',
+        pin: true,
+        start: "top top",
+        end: "+=1500",
+        scrub: true,
+      }
     })
 
-    tl.from(titleSplit.words, {
+    tljumbo.from(titleSplit.words, {
       opacity: 0, duration: 1, yPercent: 100, ease: 'expo.out', stagger: 0.02
     })
-    tl.from('#subtitle-jumbo', {
-      opacity: 0, duration: 1, yPercent: 100, ease: 'expo.out', stagger: 0.02
+    tljumbo.from('#subtitle-jumbo', {
+      opacity: 0, duration: 1, yPercent: 100, ease: 'expo.out', stagger: 0.02, delay: 2
     })
-    tl.to('#black-screen', {
+    tljumbo.to('#black-screen', {
       height: "100%",    // diventa alto quanto il contenitore (qui #jumbo che è h-screen)
-      duration: 1,       // tempo dell’animazione (1s)
+      duration: 3,       // tempo dell’animazione (1s)
       ease: "power2.out",
+      delay: 2
     })
 
   })

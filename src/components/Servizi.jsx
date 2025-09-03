@@ -26,13 +26,13 @@ export default function Servizi() {
           yPercent: 100,
         });
 
-        const tl = gsap.timeline({
+        const tlserv = gsap.timeline({
           defaults: { ease: "expo.out", duration: 1 },
           scrollTrigger: {
             trigger: "#container-servizi", // usa il wrapper come trigger
             pin: true, // pinna direttamente il trigger (più semplice/robusto)
             start: "top top",
-            end: "+=1200",
+            end: "+=1500",
             scrub: true,
             markers: true,
             invalidateOnRefresh: true,
@@ -40,9 +40,9 @@ export default function Servizi() {
           },
         });
 
-        tl.to(s1.words, { opacity: 1, yPercent: 0, stagger: 0.03 })
+        tlserv.to(s1.words, { opacity: 1, yPercent: 0, stagger: 0.03 })
           .to(s1.words, { opacity: 0, yPercent: -100, stagger: 0.02 }, ">+0.15")
-          .to(s2.words, { opacity: 1, yPercent: 0, stagger: 0.03 });
+          .to(s2.words, { opacity: 1, yPercent: 0, stagger: 0.03 })
 
         // (opzionale) se carichi webfont, rifresha i trigger dopo
         ScrollTrigger.refresh();

@@ -5,6 +5,7 @@ import { gsap } from "gsap"
 import {ScrollTrigger, SplitText} from "gsap/all"
 import Jumbo from './components/Jumbo'
 import Servizi from './components/Servizi'
+import WebDevelopment from './components/WebDevelopment'
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -14,6 +15,7 @@ const App = () => {
     <div className='overflow-hidden'>
       <Jumbo />
       <Servizi />
+      <WebDevelopment />
     </div>
   )
 }
