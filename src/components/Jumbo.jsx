@@ -10,28 +10,30 @@ const jumbo = () => {
     const titleSplit = SplitText.create('#jumbo h1', {
       type: 'words'
     })
-
+  
     const tljumbo = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#jumbo',
-        pin: true,
-        start: "top top",
-        end: "+=1500",
-        scrub: true,
-      }
+      
     })
 
     tljumbo.from(titleSplit.words, {
-      opacity: 0, duration: 1, yPercent: 100, ease: 'expo.out', stagger: 0.02
+      opacity: 0, duration: 0.8, yPercent: 100, ease: 'expo.out', stagger: 0.02
     })
     tljumbo.from('#subtitle-jumbo', {
-      opacity: 0, duration: 1, yPercent: 100, ease: 'expo.out', stagger: 0.02, delay: 2
+      opacity: 0, duration: 0.8, yPercent: 100, ease: 'expo.out', stagger: 0.02,
     })
-    tljumbo.to('#black-screen', {
+    tljumbo.from('#scroll-button', {
+      opacity: 0, duration: 0.8, yPercent: 100, ease: 'expo.out', stagger: 0.02})
+    gsap.to('#black-screen', {
       height: "100%",    // diventa alto quanto il contenitore (qui #jumbo che è h-screen)
-      duration: 3,       // tempo dell’animazione (1s)
-      ease: "power2.out",
-      delay: 2
+      duration: 0.3,       // tempo dell’animazione (1s)
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: '#jumbo',
+        toggleActions: 'play none none reverse', // ↓ play, ↑ reverse sullo start
+        start: "top top",
+        markers: true
+      }
+      
     })
 
   })
@@ -42,7 +44,7 @@ const jumbo = () => {
         <h1 id='title-jumbo'>emark</h1>
         <p id='subtitle-jumbo'>Centro di ricerca sul marketing</p>
       </div>
-      <button className='absolute bottom-15 border-1 border-solid rounded-full flex flex-col px-9 py-2'><VscArrowSmallDown className='w-auto text-lg' /></button>
+      <button id='scroll-button' className='absolute bottom-15 border-1 border-solid rounded-full flex flex-col px-9 py-2'><VscArrowSmallDown className='w-auto text-lg' /></button>
 
       <div id='black-screen' className='absolute w-full h-0 bg-black '></div>
     </div>

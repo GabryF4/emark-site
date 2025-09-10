@@ -32,7 +32,7 @@ export default function Servizi() {
             trigger: "#container-servizi", // usa il wrapper come trigger
             pin: true, // pinna direttamente il trigger (più semplice/robusto)
             start: "top top",
-            end: "+=1500",
+            end: "+=1000",
             scrub: true,
             markers: true,
             invalidateOnRefresh: true,

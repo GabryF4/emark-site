@@ -23,7 +23,7 @@ const ButtonServizi = ({ title }) => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: el,
-          start: 'top 80%',
+          start: 'top 90%',
           // markers: true,
           toggleActions: 'play none none reverse', // ↓ play, ↑ reverse sullo start
           invalidateOnRefresh: true,
@@ -33,7 +33,7 @@ const ButtonServizi = ({ title }) => {
       tl.from(el, {
         x: fromX,
         scale: 8,
-        duration: 0.3,
+        duration: 0.5,
         ease: 'power3.out',
         transformOrigin: '50% 50%',
       })
@@ -46,7 +46,7 @@ const ButtonServizi = ({ title }) => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: el,
-          start: 'top 80%',
+          start: 'top 90%',
           // markers: true,
           toggleActions: 'play none none reverse',
           invalidateOnRefresh: true,
@@ -56,7 +56,7 @@ const ButtonServizi = ({ title }) => {
       tl.from(el, {
         x: fromX,
         scale: 1, // se vuoi 1 su mobile
-        duration: 0.3,
+        duration: 0.5,
         ease: 'power3.out',
         transformOrigin: '50% 50%',
       })
