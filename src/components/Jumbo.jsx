@@ -40,7 +40,7 @@ const jumbo = () => {
 
   return (
     <div id='jumbo' className='relative h-screen w-full overflow-hidden flex flex-col items-center justify-center'>
-      <div className='text-center leading-32'>
+      <div className='text-center md:leading-32 leading-15'>
         <h1 id='title-jumbo'>emark</h1>
         <p id='subtitle-jumbo'>Centro di ricerca sul marketing</p>
       </div>
