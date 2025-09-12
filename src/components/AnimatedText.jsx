@@ -27,7 +27,7 @@ const AnimatedText = () => {
     })
 
   return (
-    <div className="container-title-fx-web md:mt-40 mt-6">
+    <div className="container-title-fx-web md:mt-30 mt-6">
         <h2 className="text">CREAZIONE SITO<span>RESTYLING SITO</span></h2>
         <h2 className="text">CREAZIONE LANDING<span>E MOLTO ALTRO!!</span></h2>
         <h2 className="text">LOCAL SEO<span>CRAZYYY</span></h2>

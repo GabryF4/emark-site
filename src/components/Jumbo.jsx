@@ -44,7 +44,7 @@ const jumbo = () => {
         <h1 id='title-jumbo'>emark</h1>
         <p id='subtitle-jumbo'>Centro di ricerca sul marketing</p>
       </div>
-      <button id='scroll-button' className='absolute bottom-15 border-1 border-solid rounded-full flex flex-col px-9 py-2'><VscArrowSmallDown className='w-auto text-lg' /></button>
+      <button id='scroll-button' className='absolute md:bottom-20 bottom-30 border-1 border-solid rounded-full flex flex-col px-9 py-2'><VscArrowSmallDown className='w-auto text-lg' /></button>
 
       <div id='black-screen' className='absolute w-full h-0 bg-black '></div>
     </div>
